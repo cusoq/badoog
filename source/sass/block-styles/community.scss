@@ -1,21 +1,18 @@
-.page-wrapper {
-  width: 1300px;
-  min-height: 100vh;
-  margin: 0 auto; }
-
 .community {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -webkit-column-gap: 65px;
-          column-gap: 65px; }
+  column-gap: 65px;
+}
 
 .community__member {
   position: relative;
   width: 385px;
-  min-height: 560px; }
+  min-height: 560px;
+  // border: 1px dotted black;
+}
 
 .community__member::after {
   content: "";
@@ -27,11 +24,13 @@
   top: 340px;
   border-radius: 50%;
   background-image: url("../img/dadoo.jpg");
-  background-size: contain; }
+  background-size: contain;
+}
 
 .community__member--one::after,
 .community__member--five::after {
-  display: block; }
+  display: block;
+}
 
 .community__member::before {
   content: "";
@@ -43,12 +42,15 @@
   top: 340px;
   border-radius: 50%;
   background-image: url("../img/badoo.jpg");
-  background-size: contain; }
+  background-size: contain;
+}
 
 .community__member--six::before,
 .community__member--seven::before {
-  display: block; }
+  display: block;
+}
 
 .community__member-name {
   font-size: 23px;
-  font-weight: 600; }
+  font-weight: 600;
+}
