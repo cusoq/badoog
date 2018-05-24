@@ -27,8 +27,7 @@
   background-size: contain;
 }
 
-.community__member--one::after,
-.community__member--five::after {
+.community__member--badooged::after {
   display: block;
 }
 
@@ -45,12 +44,17 @@
   background-size: contain;
 }
 
-.community__member--six::before,
-.community__member--seven::before {
+.community__member--badooed::before {
   display: block;
 }
 
 .community__member-name {
-  font-size: 23px;
-  font-weight: 600;
+  visibility: hidden;
+  font-size: 38px;
+  text-align: center;
+  margin: 60px 0 0 0;
+}
+
+.community__member--named .community__member-name {
+  visibility: visible;
 }

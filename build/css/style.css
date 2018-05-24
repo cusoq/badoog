@@ -1,7 +1,8 @@
 .page-wrapper {
   width: 1300px;
   min-height: 100vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "stolzlregular", sans-serif; }
 
 .community {
   list-style: none;
@@ -29,8 +30,7 @@
   background-image: url("../img/dadoo.jpg");
   background-size: contain; }
 
-.community__member--one::after,
-.community__member--five::after {
+.community__member--badooged::after {
   display: block; }
 
 .community__member::before {
@@ -45,10 +45,20 @@
   background-image: url("../img/badoo.jpg");
   background-size: contain; }
 
-.community__member--six::before,
-.community__member--seven::before {
+.community__member--badooed::before {
   display: block; }
 
 .community__member-name {
-  font-size: 23px;
-  font-weight: 600; }
+  visibility: hidden;
+  font-size: 38px;
+  text-align: center;
+  margin: 60px 0 0 0; }
+
+.community__member--named .community__member-name {
+  visibility: visible; }
+
+@font-face {
+  font-family: "stolzlregular";
+  src: url("../fonts/stolzl.woff2") format("woff2"), url("../fonts/stolzl.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
