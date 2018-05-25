@@ -2,21 +2,42 @@
   width: 1300px;
   min-height: 100vh;
   margin: 0 auto;
-  font-family: "stolzlregular", sans-serif; }
+  font-family: "stolzlregular", sans-serif;
+  background-color: #f0f0f0; }
 
 .community {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -webkit-column-gap: 65px;
-          column-gap: 65px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+@supports (display: grid) {
+  .community {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 65px;
+            column-gap: 65px; } }
 
 .community__member {
   position: relative;
   width: 385px;
-  min-height: 560px; }
+  min-height: 560px;
+  margin-right: 65px; }
+
+@supports (display: grid) {
+  .community__member {
+    margin-right: 0; } }
+
+.community__member:nth-of-type(3n) {
+  margin-right: 0; }
+
+@supports (display: grid) {
+  .community__member:nth-of-type(3n) {
+    margin-right: 0; } }
 
 .community__member::after {
   content: "";
@@ -37,11 +58,12 @@
   content: "";
   display: none;
   position: absolute;
-  width: 85px;
-  height: 85px;
+  width: 84px;
+  height: 84px;
   left: 40.6%;
   top: 340px;
   border-radius: 50%;
+  border: 1px solid #e24f1b;
   background-image: url("../img/badoo.jpg");
   background-size: contain; }
 
